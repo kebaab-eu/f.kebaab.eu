@@ -4,9 +4,14 @@
   <meta charset="UTF-8">
   <title>Redirecting…</title>
   <script>
-    const url = "https://kebaab.eu";
+    const url = "https://kebaab.eu"; // only one place to set URL
+    // JS redirect for fast browsers
     location.replace(url);
-    document.write('<meta http-equiv="refresh" content="0;url='+url+'"><p>Redirecting… <a href="'+url+'">click here</a>.</p>');
+    // Also write the meta and link for non-JS fallback
+    document.write(`
+      <meta http-equiv="refresh" content="0;url=${url}">
+      <p>Redirecting… If not redirected, <a href="${url}">click here</a>.</p>
+    `);
   </script>
 </head>
 </html>
