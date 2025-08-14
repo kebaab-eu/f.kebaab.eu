@@ -1,4 +1,12 @@
 <!DOCTYPE html>
-<script>
-  location.replace("https://kebaab.eu");
-</script>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting…</title>
+  <script>
+    const url = "https://kebaab.eu";
+    location.replace(url);
+    document.write('<meta http-equiv="refresh" content="0;url='+url+'"><p>Redirecting… <a href="'+url+'">click here</a>.</p>');
+  </script>
+</head>
+</html>
